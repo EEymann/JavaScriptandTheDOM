@@ -2,6 +2,9 @@
 //Select elements on the page
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
+const descriptionInput = document.querySelector('input.description');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
 
 //The li text gets capitalized upon mouseover
 listDiv.addEventListener('mouseover', (event) => {
@@ -31,4 +34,10 @@ toggleList.addEventListener('click', () => {
     listDiv.style.display = 'none'; //First click display is set to none.
     toggleList.textContent = 'Show List'; //If display is none, the button text will say "Show List"
   }
+});
+
+// Allow user to change the list description
+descriptionButton.addEventListener('click', () => {
+  descriptionP.innerHTML = descriptionInput.value + ':';
+  descriptionInput.value = ''; //This resets the input box to empty
 });
