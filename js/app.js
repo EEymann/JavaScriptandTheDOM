@@ -5,6 +5,8 @@ const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
+const addItemButton = document.querySelector('button.addItemButton');
+const addItemInput = document.querySelector('input.addItemInput');
 
 //The li text gets capitalized upon mouseover
 listDiv.addEventListener('mouseover', (event) => {
@@ -40,4 +42,18 @@ toggleList.addEventListener('click', () => {
 descriptionButton.addEventListener('click', () => {
   descriptionP.innerHTML = descriptionInput.value + ':';
   descriptionInput.value = ''; //This resets the input box to empty
+});
+
+// Allow user to add items to the list
+
+addItemButton.addEventListener('click', () => {
+  //Select the parent element 'ul'. This returns a collection. We can access the first ul on the page at [0]
+  let ul = document.getElementsByTagName('ul')[0];
+  //Create new list item
+  let li = document.createElement('li');
+  li.textContent = addItemInput.value;
+  //Append the list item
+  ul.appendChild(li);
+  //Clear the input field when a new list item is added
+  addItemInput.value = '';
 });
