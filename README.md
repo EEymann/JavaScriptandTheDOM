@@ -7,10 +7,10 @@
 ## Description
 
 _This webpage was created for a TeamTreehouse project._
-_Skills used:_
-_Getting a Handle on the DOM:_
+### Skills used:
+#### Getting a Handle on the DOM:
 * _Selecting Elements._
-_Making Changes to the DOM:_
+#### Making Changes to the DOM:
 * _textContent and innerHTML_
 * _changing Element Attributes_
 * _Styling Elements_
