@@ -7,6 +7,7 @@ const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
 const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
+const removeItemButton = document.querySelector('button.removeItemButton');
 
 //The li text gets capitalized upon mouseover
 listDiv.addEventListener('mouseover', (event) => {
@@ -47,7 +48,7 @@ descriptionButton.addEventListener('click', () => {
 // Allow user to add items to the list
 
 addItemButton.addEventListener('click', () => {
-  //Select the parent element 'ul'. This returns a collection. We can access the first ul on the page at [0]
+  //Select the parent element 'ul'. This returns a collection. Access the first ul on the page at [0]
   let ul = document.getElementsByTagName('ul')[0];
   //Create new list item
   let li = document.createElement('li');
@@ -56,4 +57,14 @@ addItemButton.addEventListener('click', () => {
   ul.appendChild(li);
   //Clear the input field when a new list item is added
   addItemInput.value = '';
+});
+
+// Allow user to remove items fron the list
+removeItemButton.addEventListener('click', () => {
+//Select the parent element 'ul'. This returns a collection. Access the first ul on the page at [0]
+let ul = document.getElementsByTagName('ul')[0];
+//Select the LAST child from the ul
+let li = document.querySelector('li:last-child');
+//Remove the list item
+ul.removeChild(li);
 });
