@@ -9,7 +9,7 @@
 _This webpage was created for a TeamTreehouse project._
 ### Skills used:
 #### Getting a Handle on the DOM:
-* _Selecting Elements._
+* _Selecting Elements_
 #### Making Changes to the DOM:
 * _textContent and innerHTML_
 * _changing Element Attributes_
