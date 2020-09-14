@@ -14,6 +14,7 @@ listDiv.addEventListener('mouseover', (event) => {
   if (event.target.tagName == 'LI') {
   let li = event.target; //Get a reference to the target element in the event. In this case the 'li'.
   let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
+  ul.removeChild(li); //Call removeChild on it, passing in an li, the event target.
 }
 });
 
