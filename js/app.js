@@ -12,7 +12,7 @@ const removeItemButton = document.querySelector('button.removeItemButton');
 //Delete the li text gets upon mouseover
 listDiv.addEventListener('mouseover', (event) => {
   if (event.target.tagName == 'LI') {
-  event.target.textContent = event.target.textContent.toUpperCase();
+  
 }
 });
 
