@@ -12,7 +12,7 @@ const removeItemButton = document.querySelector('button.removeItemButton');
 //Delete the li text upon click instead of mouseover
 listDiv.addEventListener('click', (event) => {
   if (event.target.tagName == 'BUTTON') { //Target and respond to button elements only
-  let li = event.target; //Get a reference to the target element in the event. In this case the 'li'.
+  let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
   let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
   ul.removeChild(li); //Call removeChild on it, passing in an li, the event target.
 }
