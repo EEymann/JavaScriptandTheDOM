@@ -5,12 +5,13 @@ const listDiv = document.querySelector('.list');
 const descriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
+const listUl = listDiv.querySelector('ul');
 const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
 //Delete the li text upon click instead of mouseover
-listDiv.addEventListener('click', (event) => {
+listUl.addEventListener('click', (event) => {
   if (event.target.tagName == 'BUTTON') { //Target and respond to button elements only
   let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
   let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
