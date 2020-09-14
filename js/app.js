@@ -9,19 +9,13 @@ const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
-//The li text gets capitalized upon mouseover
+//Delete the li text gets upon mouseover
 listDiv.addEventListener('mouseover', (event) => {
   if (event.target.tagName == 'LI') {
   event.target.textContent = event.target.textContent.toUpperCase();
 }
 });
 
-//The li text gets changed back to lowercase upon mouseout
-listDiv.addEventListener('mouseout', (event) => {
-  if (event.target.tagName == 'LI') {
-    event.target.textContent = event.target.textContent.toLowerCase();
-  }
-});
 
 /**
 Button displays "Hide List" if list is visible,
