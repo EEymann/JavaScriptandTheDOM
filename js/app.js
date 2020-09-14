@@ -8,7 +8,6 @@ const descriptionButton = document.querySelector('button.description');
 const listUl = listDiv.querySelector('ul');
 const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
-const removeItemButton = document.querySelector('button.removeItemButton');
 
 //Delete the li text upon click instead of mouseover
 listUl.addEventListener('click', (event) => {
@@ -54,14 +53,4 @@ addItemButton.addEventListener('click', () => {
   ul.appendChild(li);
   //Clear the input field when a new list item is added
   addItemInput.value = '';
-});
-
-// Allow user to remove items fron the list
-removeItemButton.addEventListener('click', () => {
-//Select the parent element 'ul'. This returns a collection. Access the first ul on the page at [0]
-let ul = document.getElementsByTagName('ul')[0];
-//Select the LAST child from the ul
-let li = document.querySelector('li:last-child');
-//Remove the list item
-ul.removeChild(li);
 });
