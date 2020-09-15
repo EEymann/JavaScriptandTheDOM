@@ -16,6 +16,8 @@ _This webpage was created for a TeamTreehouse project._
 * _Styling Elements_
 * _Creating New DOM Elements_
 * _Appending/Removing Nodes_
+* _Selecting previousElementSibling/nextElementSibling_
+
 
 ## Setup/Installation Requirements
 
