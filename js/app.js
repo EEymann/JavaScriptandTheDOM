@@ -1,4 +1,3 @@
-
 //Select elements on the page
 const toggleList = document.getElementById('toggleList');
 const listDiv = document.querySelector('.list');
@@ -16,6 +15,14 @@ listUl.addEventListener('click', (event) => {
       let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
       let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
       ul.removeChild(li); //Call removeChild on it, passing in an li, the event target.
+    }
+    if (event.target.className == 'up') { //Only remove an element if target's class name is up.
+      let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
+      let prevLi = li.previousElementSibling; //Get a reference to li's previous element sibling.
+      let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
+      if (prevLi) {
+        ul.insertBefore(li, prevLi);
+      }
     }
   }
 });
