@@ -8,6 +8,24 @@ const listUl = listDiv.querySelector('ul');
 const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
 
+//This function accepts a list item and attaches buttons to it
+function attachListItemButtons(li) {
+  let up = document.createElement('button');
+  up.className = 'up';
+  up.textContent = 'Up';
+  li.appendChild(up);
+
+  let down = document.createElement('button');
+  down.className = 'down';
+  down.textContent = 'Down';
+  li.appendChild(down);
+
+  let remove = document.createElement('button');
+  remove.className = 'remove';
+  remove.textContent = 'Remove';
+  li.appendChild(remove);
+}
+
 //Delete the li text upon click instead of mouseover
 listUl.addEventListener('click', (event) => {
   if (event.target.tagName == 'BUTTON') { //Target and respond to button elements only
@@ -67,6 +85,7 @@ addItemButton.addEventListener('click', () => {
   //Create new list item
   let li = document.createElement('li');
   li.textContent = addItemInput.value;
+  attachListItemButtons(li); 
   //Append the list item
   ul.appendChild(li);
   //Clear the input field when a new list item is added
