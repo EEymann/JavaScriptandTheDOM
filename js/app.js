@@ -8,6 +8,11 @@ const listUl = listDiv.querySelector('ul');
 const addItemButton = document.querySelector('button.addItemButton');
 const addItemInput = document.querySelector('input.addItemInput');
 const existingLi = listUl.children;
+const firstListItem = listUl.firstElementChild;
+const lastListItem = listUl.lastElementChild;
+
+firstListItem.style.backgroundColor = 'green';
+lastListItem.style.backgroundColor = 'lightgreen';
 
 //This function accepts a list item and attaches buttons to it
 function attachListItemButtons(li) {
