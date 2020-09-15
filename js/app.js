@@ -12,10 +12,12 @@ const addItemInput = document.querySelector('input.addItemInput');
 //Delete the li text upon click instead of mouseover
 listUl.addEventListener('click', (event) => {
   if (event.target.tagName == 'BUTTON') { //Target and respond to button elements only
-  let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
-  let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
-  ul.removeChild(li); //Call removeChild on it, passing in an li, the event target.
-}
+    if (event.target.className == 'remove') { //Only remove an element if target's class name is remove.
+      let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
+      let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
+      ul.removeChild(li); //Call removeChild on it, passing in an li, the event target.
+    }
+  }
 });
 
 
