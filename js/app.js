@@ -24,6 +24,15 @@ listUl.addEventListener('click', (event) => {
         ul.insertBefore(li, prevLi);
       }
     }
+//Down button
+    if (event.target.className == 'down') { //Only remove an element if target's class name is down.
+      let li = event.target.parentNode; //The li element is the parent of the button. Use the parentNode property to refer to it.
+      let nextLi = li.nextElementSibling; //Get a reference to li's next element sibling.
+      let ul = li.parentNode; //Get a reference to the target li element's parent, which would be the ul.
+      if (nextLi) {
+        ul.insertBefore(nextLi, li);
+      }
+    }
   }
 });
 
