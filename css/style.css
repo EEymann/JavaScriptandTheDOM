@@ -1,3 +1,4 @@
+
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 body {
@@ -14,8 +15,8 @@ h1 + p {
   color: #637a91;
   margin-top: .5em;
   margin-bottom: 2.65em;
-  padding-bottom: 1.32em;
-  border-bottom: 2px dotted;
+  padding-bottom: 1.325em;
+  border-bottom: 1px dotted;
 }
 ul {
   padding-left: 0;
@@ -41,10 +42,10 @@ input {
 div {
   margin-top: 2.8em;
   padding: 1.5em 0 .5em;
-  border-top: 2px dotted #637a91;
+  border-top: 1px dotted
 }
 p.description,
-p:enth-of-type(2) {
+p:nth-of-type(2) {
   font-weight: bold;
 }
 /* Buttons */
@@ -61,8 +62,11 @@ button + button {
 p + button {
   background: #52bab3;
 }
-.list li button + button {
+.list button + button {
   background: #768da3;
+}
+.list li button + button {
+  background: #508abc;
 }
 li button:first-child {
   margin-left: auto;
